@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56d55f81-cc57-4e49-a679-989b8612e654" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db_reggie.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_10_12_8_45___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_10_12_8_45___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="56d55f81-cc57-4e49-a679-989b8612e654" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ideasettings.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +66,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.7",
-    "last_opened_file_path": "F:/java/ruiji/ruiji/src/main/resources",
+    "last_opened_file_path": "G:/java实验/ruiji/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "project.structure.last.edited": "Project",
@@ -76,7 +79,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\java实验\ruiji\src\main\resources" />
       <recent name="F:\java\ruiji\ruiji\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java实验\ruiji\src\main\java\com\itheima\reggie\common" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,8 +120,17 @@
       <workItem from="1665384886707" duration="2562000" />
       <workItem from="1665455454908" duration="3155000" />
       <workItem from="1665497197865" duration="3097000" />
-      <workItem from="1665837109664" duration="5806000" />
+      <workItem from="1665837109664" duration="5944000" />
+      <workItem from="1665882393286" duration="8867000" />
     </task>
+    <task id="LOCAL-00001" summary="add employee&#10;GlobalExceptionHandler">
+      <created>1665845106294</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665845106294</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +146,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add employee&#10;GlobalExceptionHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="add employee&#10;GlobalExceptionHandler" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

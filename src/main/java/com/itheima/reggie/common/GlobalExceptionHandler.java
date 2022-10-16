@@ -25,8 +25,7 @@ public class GlobalExceptionHandler {
      * @author Sora
      * @param:
      * @DateTime 22/10/15 22:17
-     * @return:
-     * @throws
+     * @return
      */
     @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
     public R<String> exceptionHandler(SQLIntegrityConstraintViolationException ex){
