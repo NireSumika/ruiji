@@ -125,4 +125,23 @@ public class EmployeeController {
         employeeService.updateById(employee);
         return R.success("员工信息修改成功");
     }
+
+    /**
+     * @name getById
+     * @description 根据id查询员工信息
+     * @author Sora
+     * @param:
+     * @DateTime 22/10/17 22:23
+     * @return:
+     * @throws
+     */
+    @GetMapping("/{id}")
+    public R<Employee> getById(@PathVariable Long id){
+        log.info("根据id:{} 查询员工信息",id);
+        Employee employee = employeeService.getById(id);
+        if (null != employee){
+            return R.success(employee);
+        }
+        return R.error("员工不存在");
+    }
 }
