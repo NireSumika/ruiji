@@ -1,18 +1,18 @@
 package com.itheima.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.reggie.common.R;
 import com.itheima.reggie.entity.Employee;
 import com.itheima.reggie.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 
 /**
  * @author Sora
@@ -66,10 +66,63 @@ public class EmployeeController {
         return R.success(emp);
     }
 
-    /* 员工登出 */
+    /** 员工登出 */
     @PostMapping("/logout")
     public R<String> logout(HttpServletRequest request){
         request.getSession().removeAttribute("employee");
         return R.success("已退出");
+    }
+
+    /**
+     * 新增员工
+     * @param employee
+     * @return
+     */
+    @PostMapping
+    public R<String> save(HttpServletRequest request, @RequestBody Employee employee){
+        log.info("新增员工信息：{}", employee.toString());
+        employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
+        employee.setCreateTime(LocalDateTime.now());
+        employee.setUpdateTime(LocalDateTime.now());
+        Long empId = (Long) request.getSession().getAttribute("employee");
+        employee.setCreateUser(empId);
+        employee.setUpdateUser(empId);
+
+        employeeService.save(employee);
+
+        return R.success("新增员工成功");
+    }
+
+    /**
+     * @name page
+     * @description
+     * @author Sora
+     * @param: page:current page, pageSize:total page, name:search name
+     * @DateTime 22/10/16 10:16
+     * @return: Page
+     */
+    @GetMapping("/page")
+    public R<Page> page(int page, int pageSize, String name){
+        log.info("page = {}, pageSize = {}, name = {}", page, pageSize, name);
+
+        //构造分页构造器
+        Page pageInfo = new Page(page, pageSize);
+        //构造条件构造器
+        LambdaQueryWrapper<Employee> lambdaQueryWrapper = new LambdaQueryWrapper();
+        lambdaQueryWrapper.like(StringUtils.isNotEmpty(name), Employee::getName, name);
+        //执行查询
+        employeeService.page(pageInfo, lambdaQueryWrapper);
+        return R.success(pageInfo);
+    }
+
+
+    @PutMapping
+    public R<String> update(HttpServletRequest request, @RequestBody Employee employee){
+        log.info(employee.toString());
+        Long empId = (Long) request.getSession().getAttribute("employee");
+        employee.setUpdateUser(empId);
+        employee.setUpdateTime(LocalDateTime.now());
+        employeeService.updateById(employee);
+        return R.success("员工信息修改成功");
     }
 }
