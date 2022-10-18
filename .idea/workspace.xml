@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56d55f81-cc57-4e49-a679-989b8612e654" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ideasettings.zip" afterDir="false" />
+    <list default="true" id="56d55f81-cc57-4e49-a679-989b8612e654" name="Changes" comment="格式转换器文件">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/资料.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "spring.configuration.checksum": "fa316c69b8dae163aeb81ffc294cca91"
   }
 }]]></component>
@@ -107,6 +105,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Sora\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="56d55f81-cc57-4e49-a679-989b8612e654" name="Changes" comment="" />
@@ -121,7 +122,8 @@
       <workItem from="1665455454908" duration="3155000" />
       <workItem from="1665497197865" duration="3097000" />
       <workItem from="1665837109664" duration="5944000" />
-      <workItem from="1665882393286" duration="8867000" />
+      <workItem from="1665882393286" duration="9829000" />
+      <workItem from="1666015098105" duration="3727000" />
     </task>
     <task id="LOCAL-00001" summary="add employee&#10;GlobalExceptionHandler">
       <created>1665845106294</created>
@@ -130,7 +132,35 @@
       <option name="project" value="LOCAL" />
       <updated>1665845106294</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="分页查询、&#10;状态修改、&#10;格式转换器">
+      <created>1665915325174</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665915325174</updated>
+    </task>
+    <task id="LOCAL-00003" summary="格式转换器文件">
+      <created>1665915664467</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665915664467</updated>
+    </task>
+    <task id="LOCAL-00004" summary="配置远程数据库">
+      <created>1666015772694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666015772694</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改员工信息">
+      <created>1666017650180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666017650180</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +179,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add employee&#10;GlobalExceptionHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="add employee&#10;GlobalExceptionHandler" />
+    <MESSAGE value="分页查询、&#10;状态修改、&#10;格式转换器" />
+    <MESSAGE value="格式转换器文件" />
+    <MESSAGE value="配置远程数据库" />
+    <MESSAGE value="修改员工信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改员工信息" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

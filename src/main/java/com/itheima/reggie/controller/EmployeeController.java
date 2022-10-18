@@ -82,12 +82,11 @@ public class EmployeeController {
     public R<String> save(HttpServletRequest request, @RequestBody Employee employee){
         log.info("新增员工信息：{}", employee.toString());
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-        Long empId = (Long) request.getSession().getAttribute("employee");
-        employee.setCreateUser(empId);
-        employee.setUpdateUser(empId);
-
+        //employee.setCreateTime(LocalDateTime.now());
+        //employee.setUpdateTime(LocalDateTime.now());
+        //Long empId = (Long) request.getSession().getAttribute("employee");
+        //employee.setCreateUser(empId);
+        //employee.setUpdateUser(empId);
         employeeService.save(employee);
 
         return R.success("新增员工成功");
@@ -119,10 +118,29 @@ public class EmployeeController {
     @PutMapping
     public R<String> update(HttpServletRequest request, @RequestBody Employee employee){
         log.info(employee.toString());
-        Long empId = (Long) request.getSession().getAttribute("employee");
-        employee.setUpdateUser(empId);
-        employee.setUpdateTime(LocalDateTime.now());
+        //Long empId = (Long) request.getSession().getAttribute("employee");
+        //employee.setUpdateUser(empId);
+        //employee.setUpdateTime(LocalDateTime.now());
         employeeService.updateById(employee);
         return R.success("员工信息修改成功");
+    }
+
+    /**
+     * @name getById
+     * @description 根据id查询员工信息
+     * @author Sora
+     * @param:
+     * @DateTime 22/10/17 22:23
+     * @return:
+     * @throws
+     */
+    @GetMapping("/{id}")
+    public R<Employee> getById(@PathVariable Long id){
+        log.info("根据id:{} 查询员工信息",id);
+        Employee employee = employeeService.getById(id);
+        if (null != employee){
+            return R.success(employee);
+        }
+        return R.error("员工不存在");
     }
 }
