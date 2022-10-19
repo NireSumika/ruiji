@@ -8,6 +8,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
@@ -30,7 +31,7 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+/src/main/resources/资料.zip
 ### VS Code ###
 .vscode/
 
