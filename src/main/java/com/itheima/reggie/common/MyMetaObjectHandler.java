@@ -23,10 +23,10 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         log.info("公共字段自动填充[insert]");
         log.info(metaObject.toString());
-        metaObject.setValue("creatTime", LocalDateTime.now());
+        metaObject.setValue("createTime", LocalDateTime.now());
         metaObject.setValue("updateTime", LocalDateTime.now());
         //TODO 获取id
-        metaObject.setValue("creatUser", BaseContext.getCurrentId());
+        metaObject.setValue("createUser", BaseContext.getCurrentId());
         metaObject.setValue("updateUser", BaseContext.getCurrentId());
 
     }

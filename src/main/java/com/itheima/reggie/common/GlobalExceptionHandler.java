@@ -38,6 +38,22 @@ public class GlobalExceptionHandler {
         return R.error("失败了:(");
     }
 
+
+    /**
+     * @name exceptionHandler
+     * @description 处理自定义异常
+     * @author Sora
+     * @param:
+     * @DateTime 22/10/20 22:26
+     * @return:
+     * @throws
+     */
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandler(CustomException ex){
+        log.error(ex.getMessage());
+        return R.error(ex.getMessage());
+    }
+
 }
 
 
