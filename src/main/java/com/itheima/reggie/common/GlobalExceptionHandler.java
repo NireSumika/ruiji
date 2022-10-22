@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 /**
@@ -50,6 +51,12 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(CustomException.class)
     public R<String> exceptionHandler(CustomException ex){
+        log.error(ex.getMessage());
+        return R.error(ex.getMessage());
+    }
+
+    @ExceptionHandler(IOException.class)
+    public R<String> exceptionHandler(IOException ex){
         log.error(ex.getMessage());
         return R.error(ex.getMessage());
     }
